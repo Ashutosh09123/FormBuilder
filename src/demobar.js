@@ -1,6 +1,6 @@
 import React from 'react';
-import store from './src/stores/store';
-import { ReactFormGenerator } from './src/index';
+import store from './stores/store';
+import { ReactFormGenerator } from './index';
 
 const answers = {};
 // const answers = {

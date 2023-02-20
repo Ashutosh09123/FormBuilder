@@ -28,6 +28,6 @@ PlaceHolder.propTypes = {
 };
 
 PlaceHolder.defaultProps = {
-  text: 'Drop Here',
+  text: 'Dropzone',
   show: false,
 };
