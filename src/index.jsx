@@ -1,7 +1,7 @@
 /**
   * <ReactFormBuilder />
 */
-
+/*eslint-disable*/
 import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -12,6 +12,8 @@ import FormGenerator from './form';
 import store from './stores/store';
 import Registry from './stores/registry';
 import AppLocale from './language-provider';
+import * as variables from './variables';
+import DemoBar from './demobar';
 
 class ReactFormBuilder extends React.Component {
   constructor(props) {
@@ -52,7 +54,9 @@ class ReactFormBuilder extends React.Component {
     const currentAppLocale = AppLocale[language];
     if (this.props.toolbarItems) { toolbarProps.items = this.props.toolbarItems; }
     return (
-      <DndProvider backend={HTML5Backend}>
+      <div>
+        <DemoBar variables={variables} />
+     <DndProvider backend={HTML5Backend}>
         <IntlProvider
           locale={currentAppLocale.locale}
           messages={currentAppLocale.messages}>
@@ -91,6 +95,8 @@ class ReactFormBuilder extends React.Component {
           </div>
         </IntlProvider>
       </DndProvider>
+      </div>
+ 
     );
   }
 }

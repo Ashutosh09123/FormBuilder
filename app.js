@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DemoBar from './src/demobar';
+// import DemoBar from './src/demobar';
 // eslint-disable-next-line no-unused-vars
 import FormBuilder, { Registry } from './src/index';
-import * as variables from './variables';
+import * as variables from './src/variables';
 
 // Add our stylesheets for the demo.
 require('./scss/application.scss');
@@ -106,7 +106,7 @@ ReactDOM.render(
   document.getElementById('form-builder'),
 );
 
-ReactDOM.render(
-  <DemoBar variables={variables} />,
-  document.getElementById('demo-bar'),
-);
+// ReactDOM.render(
+//   <DemoBar variables={variables} />,
+//   document.getElementById('demo-bar'),
+// );
