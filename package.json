@@ -1,6 +1,6 @@
 {
   "name": "solution-form-builder",
-  "version": "0.15.8",
+  "version": "0.15.9",
   "description": "A complete form builder for react.",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
