@@ -103,7 +103,7 @@ export default class Demobar extends React.Component {
         { this.state.previewVisible &&
           <div className={modalClass} role="dialog">
             <div className="modal-dialog modal-lg" role="document">
-              <div className="modal-content">
+              <div className="modal-content" style={{ marginTop: '10%' }}>
                 <ReactFormGenerator
                   download_path=""
                   back_action="/"
