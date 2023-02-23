@@ -103,7 +103,7 @@ export default class Demobar extends React.Component {
         { this.state.previewVisible &&
           <div className={modalClass} role="dialog">
             <div className="modal-dialog modal-lg" role="document">
-              <div className="modal-content" style={{ marginTop: '18%' }}>
+              <div className="modal-content" style={{ marginTop: '13%' }}>
                 <ReactFormGenerator
                   download_path=""
                   back_action="/"
@@ -129,7 +129,7 @@ export default class Demobar extends React.Component {
         { this.state.roPreviewVisible &&
           <div className={roModalClass}>
             <div className="modal-dialog modal-lg">
-              <div className="modal-content">
+              <div className="modal-content" style={{ marginTop: '13%' }}>
                 <ReactFormGenerator
                   download_path=""
                   back_action="/"
@@ -154,8 +154,8 @@ export default class Demobar extends React.Component {
 
         { this.state.shortPreviewVisible &&
           <div className={shortModalClass}>
-            <div className="modal-dialog modal-lg">
-              <div className="modal-content border border-light p-3 mb-4">
+            <div className="modal-dialog modal-lg" >
+              <div className="modal-content border border-light p-3 mb-4" style={{ marginTop: '13%' }}>
                 <ReactFormGenerator
                   download_path=""
                   back_action=""
