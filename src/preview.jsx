@@ -269,20 +269,59 @@ export default class Preview extends React.Component {
     return this.props.renderEditForm(formElementEditProps);
   }
 
+  Dark() {
+   const myElement = document.getElementById('theme');
+    myElement.style.backgroundImage = 'linear-gradient(black, purple)';
+    const popUp = document.getElementById('popUp');
+    popUp.style.backgroundImage = 'linear-gradient(black, purple)';
+    popUp.style.color = 'white';
+  }
+
+  Glass() {
+    const myElement = document.getElementById('theme');
+     myElement.style.backgroundImage = 'linear-gradient(green, violet)';
+     const popUp = document.getElementById('popUp');
+    popUp.style.backgroundImage = 'linear-gradient(green , violet)';
+    popUp.style.color = 'white';
+   }
+
+   Chalk() {
+    const myElement = document.getElementById('theme');
+     myElement.style.backgroundImage = 'linear-gradient(green, red)';
+     const popUp = document.getElementById('popUp');
+    popUp.style.backgroundImage = 'linear-gradient(green, red)';
+    popUp.style.color = 'white';
+   }
+
+   Blue() {
+    const myElement = document.getElementById('theme');
+     myElement.style.backgroundImage = 'linear-gradient(#0F143C 100%, #282D49 100% )';
+     const popUp = document.getElementById('popUp');
+    popUp.style.backgroundImage = 'linear-gradient(#0F143C 100%, #282D49 100%)';
+    popUp.style.color = 'white';
+   }
+
   render() {
     let classes = this.props.className;
     if (this.props.editMode) { classes += ' is-editing'; }
     const data = this.state.data.filter(x => !!x && !x.parentId);
     const items = data.map((item, index) => this.getElement(item, index));
     return (
-      <div className={classes}>
-        <div className="edit-form" ref={this.editForm}>
+      <>
+      <div id='theme' style={{backgroundImage:'linear-gradient(#0F143C 100%, #282D49 100% )'}} className={classes}>
+        <div id='popUp' className="edit-form" ref={this.editForm} style={{backgroundImage:'linear-gradient(#0F143C 100%, #282D49 100% )', color: 'white'}}>
           {this.props.editElement !== null && this.showEditForm()}
         </div>
         <div className="Sortable">{items}</div>
         <PlaceHolder id="form-place-holder" show={items.length === 0} index={items.length} moveCard={this.cardPlaceHolder} insertCard={this.insertCard} />
         <CustomDragLayer/>
+      <button onClick={this.Dark}> Dark</button>
+      <button onClick={this.Glass}>Glass</button>
+      <button onClick={this.Chalk}>Chalk</button>
+      <button onClick={this.Blue}> Blue</button>
+
       </div>
+      </>
     );
   }
 }

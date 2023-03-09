@@ -46,7 +46,7 @@ class DragHandle extends PureComponent {
 
   render() {
     const { connectDragSource } = this.props;
-    return connectDragSource(<div className="btn is-isolated" style={style} ><i className="is-isolated fas fa-grip-vertical"></i></div>);
+    return connectDragSource(<div className="btn is-isolated" style={style} ><i style={{color: '#FFFFF0'}} className="is-isolated fas fa-grip-vertical"></i></div>);
   }
 }
 
