@@ -2248,9 +2248,14 @@
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+<<<<<<< HEAD
   justify-content: center
 }
 
+=======
+  justify-content: center;
+}
+>>>>>>> 27a479e2bbb5206c7a9e721ca91db626fad1a0d6
 .rdw-embedded-modal-btn {
   margin: 0 3px;
   width: 75px;
