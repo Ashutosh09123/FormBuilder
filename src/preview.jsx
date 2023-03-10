@@ -269,25 +269,25 @@ export default class Preview extends React.Component {
     return this.props.renderEditForm(formElementEditProps);
   }
 
-  myFunction() {
+  glass() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(#141b2d 100% , #01B075 90%)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(#141b2d 100% , #01B075 90%)';
     document.getElementById('theme').style.color = 'white';
   }
 
-  myFunction1() {
+  dark() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(to bottom right, black, black)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(to bottom right, black, black)';
     document.getElementById('theme').style.color = '#008080';
   }
 
-  myFunction2() {
+  chalk() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(to bottom right, #0C2D48, #0C2D48)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(to bottom right, #0C2D48, #0C2D48)';
     document.getElementById('theme').style.color = '#808080';
 
   }
-  myFunction3() {
+  blue() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(to bottom right, #003060, #003060)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(to bottom right, #003060, #003060)';
     document.getElementById('theme').style.color = 'white';
@@ -301,14 +301,15 @@ export default class Preview extends React.Component {
     const items = data.map((item, index) => this.getElement(item, index));
     return (
       <>
-      <div style={{marginLeft: '65%',marginTop: '-3.2%',position:'absolute',border:'1px solid black',}}>
-      <button type="button" onClick={this.myFunction} style={{borderRight:'1px solid black', border: 'none', background: 'none' }}>GLASS</button>
-        <button type="button" onClick={this.myFunction1} style={{borderRight:'1px solid black', border: 'none', background: 'none' }}>DARK</button>
-        <button type="button" onClick={this.myFunction2} style={{ borderRight:'1px solid black',border: 'none', background: 'none' }}>CHALK</button>
-        <button type="button" onClick={this.myFunction3} style={{borderRight:'1px solid black', border: 'none', background: 'none' }}>BLUE</button>
-        </div>
+      <div className="btn-group" role="group" aria-label="Basic outlined example" style={{marginLeft: '65%',marginTop: '-3.2%',position:'absolute'}}>
+      <button type="button" className="btn btn-outline-secondary" onClick={this.glass} >GLASS</button>
+  <button type="button" className="btn btn-outline-secondary"onClick={this.dark} >DARK</button>
+  <button type="button" className="btn btn-outline-secondary" onClick={this.chalk}>CHALK</button>
+  <button type="button" className="btn btn-outline-secondary" onClick={this.blue}>BLUE</button>
+ </div>
       <div className={classes} id="preview" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)' }}>
-        <div className="edit-form" ref={this.editForm} id="theme" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)',color:'white' }} >
+        <div className="edit-form" ref={this.editForm} id="theme" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)',color:'white',height: '90%',marginLeft:'10%',marginTop:'4.5%',
+    width:' 80%' }} >
           {this.props.editElement !== null && this.showEditForm()}
         </div>
         <div className="Sortable">{items}</div>
