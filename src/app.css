@@ -3233,8 +3233,8 @@
 .react-form-builder .react-form-builder-toolbar {
     width: 60%;
     background: #000080;
-    margin-left: -2%;
-    height: 23rem;
+    margin-left: 2%;
+    height: 29rem;
     margin-top: 24px;
     overflow-x: auto;
 }
