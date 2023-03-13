@@ -272,7 +272,7 @@ export default class Preview extends React.Component {
   glass() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(#141b2d 100% , #01B075 90%)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(#141b2d 100% , #01B075 90%)';
-    document.getElementById('theme').style.color = 'white';
+    document.getElementById('theme').style.color = '#008080';
   }
 
   dark() {
@@ -290,7 +290,7 @@ export default class Preview extends React.Component {
   blue() {
     document.getElementById('preview').style.backgroundImage = 'linear-gradient(to bottom right, #003060, #003060)';
     document.getElementById('theme').style.backgroundImage = 'linear-gradient(to bottom right, #003060, #003060)';
-    document.getElementById('theme').style.color = 'white';
+    document.getElementById('theme').style.color = '#008080';
 
   }
 
@@ -308,8 +308,7 @@ export default class Preview extends React.Component {
   <button type="button" className="btn btn-outline-secondary" onClick={this.blue}>BLUE</button>
  </div>
       <div className={classes} id="preview" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)' }}>
-        <div className="edit-form" ref={this.editForm} id="theme" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)',color:'white',height: '90%',marginLeft:'10%',marginTop:'4.5%',
-    width:' 80%' }} >
+        <div className="edit-form" ref={this.editForm} id="theme" style={{ backgroundImage : 'linear-gradient( #282D49 100%,#0F143C 90%)',color:'#008080' }} >
           {this.props.editElement !== null && this.showEditForm()}
         </div>
         <div className="Sortable">{items}</div>
