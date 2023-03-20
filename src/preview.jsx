@@ -301,7 +301,7 @@ export default class Preview extends React.Component {
     const items = data.map((item, index) => this.getElement(item, index));
     return (
       <>
-      <div className="btn-group" role="group" aria-label="Basic outlined example" style={{marginLeft: '65%',marginTop: '-3.2%',position:'absolute'}}>
+      <div className="btn-group" role="group" aria-label="Basic outlined example" style={{marginLeft: '60%',marginTop: '-3.2%',position:'absolute'}}>
       <button type="button" className="btn btn-outline-secondary" onClick={this.glass} >GLASS</button>
   <button type="button" className="btn btn-outline-secondary"onClick={this.dark} >DARK</button>
   <button type="button" className="btn btn-outline-secondary" onClick={this.chalk}>CHALK</button>
